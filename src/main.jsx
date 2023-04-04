@@ -17,7 +17,8 @@ const restaurant = createBrowserRouter([
     children: [
       {
         path: "foods",
-        element: <Foods></Foods>
+        element: <Foods></Foods>,
+        loader: ()=> fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=chicken')
       }
     ]
   }
